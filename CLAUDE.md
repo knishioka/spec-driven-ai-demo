@@ -51,14 +51,23 @@ PR本文には以下を必ず含める:
 - [x] Manual check: `python -c "..."` - ✅ Returns expected output
 ```
 
-## デモ用スキル
+## スキル
 
-このリポジトリには以下のスキルが用意されています:
+### 実務用（2コマンド）
+
+- `/create-issue`: 要望→質問→Issue with Spec（ISSUE_WITH_SPEC.md）
+- `/resolve-issue`: Issue→Plan→実装→テスト→PR下書き（PR_DRAFT.md）
+
+**推奨**: 実際の開発ではこちらを使用。
+
+### 学習用（4コマンド）
 
 - `/issue-draft`: 要望からIssue草案を作成（ISSUE_DRAFT.md）
 - `/spec`: IssueからSpec文書を生成（spec.md）
 - `/plan`: Specから実装計画を生成（plan.md）
 - `/ship`: 実装→テスト→PR下書き生成（PR_DRAFT.md）
+
+**用途**: プロセスを段階的に理解したい場合。
 
 ## 参考
 

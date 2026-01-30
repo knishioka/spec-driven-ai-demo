@@ -40,18 +40,44 @@ make install
 make test
 ```
 
-### デモ手順（5〜10分で完結）
+### ワークフロー
 
-1. `/issue-draft` - 要望から Issue草案を作成（曖昧なら質問で深掘り）
-2. `/spec` - Issue から spec.md を生成
-3. `/plan` - spec.md から plan.md を生成（PR範囲を明確化）
-4. `/ship` - 実装→テスト→PR_DRAFT.md 生成
+このリポジトリには2種類のワークフローがあります：
 
-### Claude Code on the Web
+#### 実務用（2コマンド）- 推奨
 
-1. リポジトリをクローン
-2. `make test` でテスト実行を確認
-3. Issueを作成してスキルを実行
+```bash
+/create-issue    # Issue草案→Spec（ISSUE_WITH_SPEC.md）を一気に作成
+/resolve-issue   # Issue→Plan→実装→テスト→PR下書き
+```
+
+**所要時間**: 5-10分
+**用途**: 実際の開発で使う効率的なワークフロー
+
+#### 学習用（4コマンド）- プロセス理解
+
+```bash
+/issue-draft     # Issue草案作成
+/spec            # spec.md生成
+/plan            # plan.md生成
+/ship            # 実装→テスト→PR下書き
+```
+
+**所要時間**: 5-10分（同じ）
+**用途**: 仕様書駆動開発のプロセスを段階的に理解
+
+### デモ手順
+
+**実務用ワークフロー（推奨）**:
+1. `/create-issue` - 質問に答えて ISSUE_WITH_SPEC.md 生成
+2. Issue をGitHubに投稿（または手元で確認）
+3. `/resolve-issue` - plan.md確認後、実装→PR下書き生成
+
+**学習用ワークフロー**:
+1. `/issue-draft` - Issue草案作成
+2. `/spec` - 仕様明確化
+3. `/plan` - 実装範囲決定
+4. `/ship` - 実装と検証
 
 ## 主要コマンド
 
