@@ -8,6 +8,14 @@ user-invocable: true
 
 Implements the plan, runs tests, and generates a PR draft with actual results.
 
+## Prerequisites
+
+Before running this skill, ensure:
+- Dependencies are installed: `make install`
+- Baseline tests pass: `make test`
+
+If not already done, the skill will check and prompt for installation.
+
 ## Process
 
 1. **Read plan.md**

@@ -39,3 +39,10 @@ ENV/
 
 # OS
 .DS_Store
+
+# Spec-driven workflow outputs
+ISSUE_TITLE.txt
+ISSUE_DRAFT.md
+spec.md
+plan.md
+PR_DRAFT.md
