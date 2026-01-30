@@ -66,6 +66,11 @@ make test
 ```
 .
 ├── .claude/skills/    # デモ用Skills（issue-draft/spec/plan/ship）
+├── examples/          # デモシナリオ集（入力例・期待される流れ）
+│   ├── README.md
+│   ├── 01-kebab-case.md
+│   ├── 02-truncate-text.md
+│   └── 03-slugify.md
 ├── src/demoapp/       # アプリケーションコード
 ├── tests/             # テストコード
 ├── Makefile           # タスクランナー
@@ -102,15 +107,30 @@ make test
 
 数秒で完了する最小限のテストセット。
 
-## デモ実演例
+## デモシナリオ
 
-### ケース: camelCase変換関数の追加
+[`examples/`](examples/) ディレクトリに詳細なデモシナリオを用意しています：
+
+| シナリオ | 所要時間 | 難易度 | 推奨用途 |
+|---------|---------|--------|----------|
+| [01-kebab-case](examples/01-kebab-case.md) | 3-5分 | 簡単 | 短時間で全体の流れを見せる |
+| [02-truncate-text](examples/02-truncate-text.md) | 5-7分 | 中程度 | ビジネスロジック仕様化を体験 |
+| [03-slugify](examples/03-slugify.md) | 7-10分 | やや複雑 | 技術的検討を含む完全な流れ |
+
+各シナリオには以下が含まれます：
+- `/issue-draft` への入力例
+- 期待される質問と推奨回答
+- 生成される仕様書・計画のポイント
+- 実装コード例
+- デモで強調すべきポイント
+
+### クイックスタート: kebab-case変換（3-5分）
 
 ```bash
 # Step 1: Issue草案作成
 /issue-draft
-> "テキストをcamelCaseに変換する関数を追加したい"
-→ 質問で深掘り → ISSUE_DRAFT.md 生成
+> "テキストをkebab-caseに変換する関数が欲しい"
+→ 質問で深掘り（入力形式、特殊文字等）→ ISSUE_DRAFT.md 生成
 
 # Step 2: 仕様書生成
 /spec
@@ -125,5 +145,4 @@ make test
 → 実装 → make test → PR_DRAFT.md 生成
 ```
 
-**所要時間**: 5〜10分
-**成果物**: 実装コード + テスト + 検証済みPR下書き
+詳細は [examples/01-kebab-case.md](examples/01-kebab-case.md) を参照。
