@@ -1,12 +1,14 @@
 ---
 name: issue-draft
-description: Create GitHub Issue draft with AC/Non-goals/Tasks. Use when starting from vague requirements - asks clarifying questions if needed.
+description: Create GitHub Issue draft with AC/Non-goals/Tasks. Use when starting from vague requirements - asks clarifying questions if needed. Also used internally by create-issue skill.
 user-invocable: true
 ---
 
 # Issue Draft Skill
 
 Creates a well-structured GitHub Issue draft from vague user requirements.
+
+**Note**: This skill is also used as part of the `/create-issue` workflow for learning purposes.
 
 ## Process
 
