@@ -32,26 +32,33 @@ make test
 
 ## PR作成
 
-### PRテンプレート（今後導入予定）
+### PRテンプレート
 
 PR本文には以下を必ず含める:
 
 1. **Summary**: 変更の概要
 2. **Related Issue**: 対応するIssue番号（`Closes #N`）
-3. **Verification**: 検証方法
+3. **Verification**: 検証方法と実行結果
+
+**Verification重要ルール:**
+- チェックだけでなく「コマンド + 実行結果」を必ず記載
+- 未実施のものはチェックしない（嘘の✅禁止）
 
 **Verification例:**
 
-```bash
-make test  # すべてのテストが通ることを確認
+```markdown
+- [x] `make test` - ✅ 7 passed in 0.01s
+- [x] Manual check: `python -c "..."` - ✅ Returns expected output
 ```
 
-## スキル実行
+## デモ用スキル
 
-今後、以下のようなスキルを追加予定:
+このリポジトリには以下のスキルが用意されています:
 
-- `/resolve-issue <n>`: Issue自動解決ワークフロー
-- `/resolve-feedback`: PRレビューフィードバック対応
+- `/issue-draft`: 要望からIssue草案を作成（ISSUE_DRAFT.md）
+- `/spec`: IssueからSpec文書を生成（spec.md）
+- `/plan`: Specから実装計画を生成（plan.md）
+- `/ship`: 実装→テスト→PR下書き生成（PR_DRAFT.md）
 
 ## 参考
 

@@ -20,6 +20,13 @@ make install
 make test
 ```
 
+### デモ手順（5〜10分で完結）
+
+1. `/issue-draft` - 要望から Issue草案を作成（曖昧なら質問で深掘り）
+2. `/spec` - Issue から spec.md を生成
+3. `/plan` - spec.md から plan.md を生成（PR範囲を明確化）
+4. `/ship` - 実装→テスト→PR_DRAFT.md 生成
+
 ### Claude Code on the Web
 
 1. リポジトリをクローン
