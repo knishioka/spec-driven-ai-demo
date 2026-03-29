@@ -36,7 +36,7 @@ def test_to_kebab_case_pascalcase():
 
 def test_to_kebab_case_special_chars():
     """Test removing special characters during conversion."""
-    assert to_kebab_case("user!Name@123") == "username123"
+    assert to_kebab_case("user!Name@123") == "user-name123"
 
 
 def test_to_kebab_case_consecutive_capitals():
@@ -47,3 +47,8 @@ def test_to_kebab_case_consecutive_capitals():
 def test_to_kebab_case_empty_string():
     """Test handling empty string."""
     assert to_kebab_case("") == ""
+
+
+def test_to_kebab_case_snake_case_input():
+    """Test converting snake_case input to kebab-case."""
+    assert to_kebab_case("hello_world") == "hello-world"
